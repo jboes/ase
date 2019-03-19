@@ -305,8 +305,6 @@ def read_espresso_out(fileobj, index=-1, results_required=True):
             if image_index < bands_index < next_index:
                 bands_index += 2
 
-                if pwo_lines[bands_index].strip() == kpoints_warning:
-                    continue
                 if 'convergence NOT achieved' in pwo_lines[bands_index]:
                     continue
 
